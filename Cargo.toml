@@ -1,0 +1,19 @@
+[package]
+name = "xero-bot-rs"
+version = "0.1.0"
+authors = ["xero-lib <jonathankurtz@protonmail.com>"]
+edition = "2018"
+
+[build]
+rustflags = ["-C", "target-cpu=native"] # for simd, dont use for cross compile lol x3
+
+[dependencies]
+tokio = { version = "1.5", features = ["rt", "rt-multi-thread", "macros", "io-util", "time"] }
+tracing = "0.1.26"
+tracing-subscriber = "0.2.18"
+dotenv = "0.15.0"
+twilight-cache-inmemory = "0.3"
+twilight-gateway = "0.3"
+twilight-http = "0.3"
+twilight-model = "0.3"
+futures = "0.3.14"
